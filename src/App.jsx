@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import logo from './assets/logo2.png'
 import aboutImg from './assets/aboutImg.jpeg'
-import equipeImg from './assets/equipe.jpeg'
 import heroImg from './assets/hero.png'
+import  responsavelImg from './assets/responsavel.jpeg'
 
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
@@ -18,6 +18,8 @@ import landIcon from './assets/land.png';
 import tripodIcon from './assets/tripod.png';
 import snowedMountainsIcon from './assets/snowed-mountains.png';
 import handshakeIcon from './assets/handshake.png';
+import architectureIcon from './assets/arquiteto.png'
+import leafIcon from './assets/leaf.png'
 
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
@@ -156,10 +158,23 @@ const services = [
   },
 
   {
+    title: "Arquitetura e Projetos",
+    desc: "Desenvolvemos projetos residenciais e comerciais, projetos luminotécnicos e de interiores, paisagismo e urbanismo, além de projetos estrutural, elétrico e hidrossanitário. Também oferecemos acompanhamento de obras e suporte em processos de aprovação, regularização e habite-se.",
+    icon: architectureIcon,
+  },
+
+  {
+  title: "Licenciamento Ambiental e CETESB",
+  desc: "Atuamos com processos de licenciamento ambiental e regularizações junto à CETESB.",
+  icon: leafIcon,
+  },
+
+  {
     title: "Apoio Técnico para Projetos e Aprovações",
     desc: "Oferecemos suporte técnico com levantamentos, plantas, memoriais e informações topográficas necessárias para projetos e processos de aprovação junto a prefeituras, cartórios e demais órgãos competentes.",
     icon: contractIcon,
   },
+  
 ];
  
 
@@ -451,11 +466,27 @@ ${formData.mensagem || 'Não informado.'}
                   className="about__mosaic-wide"
                 />
 
-                <img
-                  src={equipeImg}
-                  alt="Equipamento de medição topográfica"
-                  className="about__mosaic-img"
-                />
+                <div className="about__responsavel">
+                  <img
+                    src={responsavelImg}
+                    alt="Responsável Técnico da EDN Topografia"
+                    className="about__responsavel-img"
+                  />
+
+                  <div className="about__responsavel-overlay">
+                    <div className="about__responsavel-info">
+                      <span className="about__responsavel-label">
+                        Responsável Técnico
+                      </span>
+
+                      <h3>Ednalmo</h3>
+
+                      <span className="about__responsavel-crea">
+                        CREA: XXXXXXX
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="about__mosaic-stat">
                   <span>24 +</span>

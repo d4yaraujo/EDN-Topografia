@@ -563,7 +563,7 @@ width: 100%;
 
 .about__mosaic-stat {
 background: #e00000;
-height: 200px;
+height: 280px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -632,6 +632,80 @@ color: #cbd5e1;
 font-size: 13px;
 line-height: 1.5;
 font-family: 'Inter', sans-serif;
+}
+
+.about__responsavel {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  min-height: 280px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.about__responsavel-img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about__responsavel-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.45) 45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.about__responsavel-info {
+  color: #fff;
+  transform: translateY(20px);
+  transition: transform 0.35s ease;
+}
+
+.about__responsavel-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e00000;
+}
+
+.about__responsavel-info h3 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about__responsavel-crea {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.about__responsavel:hover .about__responsavel-img {
+  transform: scale(1.05);
+}
+
+.about__responsavel:hover .about__responsavel-overlay {
+  opacity: 1;
+}
+
+.about__responsavel:hover .about__responsavel-info {
+  transform: translateY(0);
 }
 
 /* ══════════════════════════════════════════════════════════════════════════

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import logo from './assets/logo2.png'
 import aboutImg from './assets/aboutImg.jpeg'
 import equipeImg from './assets/equipe.jpeg'
-import heroImg from './assets/1.jpeg'
+import heroImg from './assets/hero.png'
 
 
 // ── Icons ─────────────────────────────────────────────────────────────────────
@@ -161,6 +161,7 @@ const services = [
     icon: contractIcon,
   },
 ];
+ 
 
 const diferenciais = [
   'Compromisso e atenção em cada etapa do projeto',
@@ -194,27 +195,6 @@ const passos = [
   },
 ]
 
-const regioes = [
-  'Ribeirão Preto',
-  'Franca',
-  'Barretos',
-  'Araraquara',
-  'São Carlos',
-  'Bebedouro',
-  'Sertãozinho',
-  'Jaboticabal',
-  'Pradópolis',
-  'Guariba',
-  'Monte Alto',
-  'Pitangueiras',
-  'Olímpia',
-  'Colina',
-  'Pontal',
-]
-
-
-const HERO_IMG =
-  'https://images.unsplash.com/photo-1654643353084-10e62e05b9bf?w=1600&h=900&fit=crop&auto=format'
 
 const WHATSAPP_URL = `https://wa.me/5511998884920?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20de%20topografia`
 
@@ -256,7 +236,7 @@ Olá! Gostaria de solicitar informações sobre um serviço de topografia.
 ${formData.mensagem || 'Não informado.'}
     `.trim()
 
-    const whatsappUrl = `https://wa.me/5511988019689?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/5511998884920?text=${encodeURIComponent(
       whatsappMessage
     )}`
 
@@ -404,7 +384,7 @@ ${formData.mensagem || 'Não informado.'}
             <p className="hero__text">
               Há mais de 24 anos oferecemos serviços topográficos de alta
               qualidade para construtoras, engenheiros e proprietários em
-              toda a região de Arujá e interior de São Paulo.
+              todo o estado de São Paulo, e outros estados.
             </p>
 
             <div className="hero__ctas">
@@ -523,7 +503,7 @@ ${formData.mensagem || 'Não informado.'}
                 {[
                   'Profissionais registrados no CREA',
                   'Equipamentos certificados',
-                  'Atuação em todo interior de SP',
+                  'Atuação em todo o estado de SP',
                   'Entrega dentro do prazo',
                 ].map((item) => (
                   <div key={item} className="about__check">
@@ -566,29 +546,29 @@ ${formData.mensagem || 'Não informado.'}
           <div className="services__grid">
 
             {services.map((svc) => (
-            <div
-              key={svc.title}
-              className="service-card"
-            >
-              <div className="service-card__icon">
-                <img src={svc.icon} alt="" />
-              </div>
-
-              <div className="service-card__line" />
-
-              <h3>{svc.title}</h3>
-
-              <p>{svc.desc}</p>
-
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="service-card__more"
-              >
-                Saiba mais <IconArrow />
-              </a>
+          <div
+            key={svc.title}
+            className="service-card"
+          >
+            <div className="service-card__icon">
+              <img src={svc.icon} alt="" />
             </div>
+
+            <div className="service-card__line" />
+
+            <h3>{svc.title}</h3>
+
+            <p>{svc.desc}</p>
+
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="service-card__more"
+            >
+              Saiba mais <IconArrow />
+            </a>
+          </div>
             ))}
 
           </div>
@@ -688,67 +668,77 @@ ${formData.mensagem || 'Não informado.'}
 
       {/* ── REGIÕES ────────────────────────────────────────────────────────── */}
 
-      <section id="regioes" className="section section--dark">
+{/* ══════════════════════════════════════════════════════════════════════════
+    REGIÕES
+══════════════════════════════════════════════════════════════════════════ */}
 
-        <div className="container">
+<section id="regioes" className="section section--dark">
 
-          <div className="regions__grid">
+  <div className="container">
 
-            <div className="regions__content">
+    <div className="regions__grid">
 
-              <div className="eyebrow">
-                <div className="eyebrow__line" />
-                <span className="eyebrow__text">
-                  Regiões de Atendimento
-                </span>
-              </div>
+      <div className="regions__content">
 
-              <h2>
-                Presente em toda a região de Arujá
-              </h2>
-
-              <p className="regions__text">
-                Atendemos empresas, construtoras, engenheiros e
-                proprietários em toda a região de Arujá e no interior
-                do estado de São Paulo. Nossa mobilidade e estrutura
-                nos permitem executar projetos com eficiência em
-                qualquer área de cobertura.
-              </p>
-
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-amber-outline"
-              >
-                Verificar minha região <IconArrow />
-              </a>
-
-            </div>
-
-            <div className="cities__grid">
-
-              {regioes.map((cidade) => (
-                <div
-                  key={cidade}
-                  className="city-item"
-                >
-                  <div className="city-item__dot" />
-                  <span>{cidade}</span>
-                </div>
-              ))}
-
-              <div className="city-item city-item--more">
-                <span>e outras regiões...</span>
-              </div>
-
-            </div>
-
-          </div>
-
+        <div className="eyebrow">
+          <div className="eyebrow__line" />
+          <span className="eyebrow__text">
+            Regiões de Atendimento
+          </span>
         </div>
 
-      </section>
+        <h2>
+          Atendimento em todo o estado de São Paulo
+        </h2>
+
+        <p className="regions__text">
+          A EDN Topografia atende clientes em todo o estado de São Paulo,
+          levando soluções topográficas e documentação técnica para
+          diferentes regiões. Também atuamos em estados próximos, como
+          Minas Gerais e Rio de Janeiro.
+        </p>
+
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-amber-outline"
+        >
+          Verificar minha região <IconArrow />
+        </a>
+
+      </div>
+
+      <div className="cities__grid">
+
+        <div className="city-item city-item--state">
+          <div className="city-item__dot" />
+          <span>Todo o estado de São Paulo</span>
+        </div>
+
+        <div className="city-item">
+          <div className="city-item__dot" />
+          <span>Minas Gerais</span>
+        </div>
+
+        <div className="city-item">
+          <div className="city-item__dot" />
+          <span>Rio de Janeiro</span>
+        </div>
+
+        <div className="city-item city-item--more">
+          <span>
+            Outros estados: consulte nossa equipe
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* ── CTA ────────────────────────────────────────────────────────────── */}
 
@@ -870,9 +860,9 @@ ${formData.mensagem || 'Não informado.'}
 
                     label: 'Endereço',
 
-                    value: 'Rua das Acácias, 450 — Arujá, SP',
+                    value: 'Rua Francisco Pereira de Souza, 309 — Vila Nova, SP',
 
-                    href: '#',
+                    href: 'https://maps.app.goo.gl/WZ1W4H3m694UgYJu8',
 
                   },
 
@@ -1092,7 +1082,7 @@ ${formData.mensagem || 'Não informado.'}
 
               <p className="footer__brand-desc">
                 Serviços topográficos de precisão para engenharia,
-                construção civil e regularização fundiária no interior
+                construção civil e regularização fundiária em todo o estado
                 de São Paulo.
               </p>
 
@@ -1171,8 +1161,8 @@ ${formData.mensagem || 'Não informado.'}
                   },
                   {
                     icon: <IconMapPin />,
-                    text: 'Arujá, SP',
-                    href: '#',
+                    text: 'Santa Isabel, SP',
+                    href: 'https://maps.app.goo.gl/WZ1W4H3m694UgYJu8',
                   },
                 ].map((item) => (
                   <li key={item.text}>

@@ -813,97 +813,159 @@ font-family: 'Inter', sans-serif;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
-REGIÕES
+   REGIÕES
 ══════════════════════════════════════════════════════════════════════════ */
 
 .regions__grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 64px;
-align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
 }
 
 .regions__content h2 {
-font-size: clamp(1.75rem, 3vw, 3rem);
-color: #fff;
-margin-bottom: 24px;
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.15;
 }
 
 .regions__text {
-color: #94a3b8;
-line-height: 1.75;
-margin-bottom: 32px;
-font-family: 'Inter', sans-serif;
+  color: #94a3b8;
+  line-height: 1.75;
+  margin-bottom: 32px;
+  font-family: 'Inter', sans-serif;
+  max-width: 620px;
 }
 
 .btn-amber-outline {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-border: 1px solid #e00000;
-color: #e00000;
-padding: 12px 24px;
-font-size: 14px;
-font-weight: 500;
-font-family: 'Inter', sans-serif;
-transition: background 0.2s, color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e00000;
+  color: #e00000;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: background 0.2s, color 0.2s;
 }
 
 .btn-amber-outline:hover {
-background: #e00000;
-color: #050505;
+  background: #e00000;
+  color: #050505;
 }
 
+/* ── Estados ───────────────────────────────────────────────────────────── */
+
 .cities__grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 1px;
-background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .city-item {
-background: #050505;
-padding: 10px 16px;
-display: flex;
-align-items: center;
-gap: 8px;
-transition: background 0.2s;
-cursor: default;
+  background: #050505;
+  min-height: 64px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+  cursor: default;
 }
 
 .city-item:hover {
-background: #111111;
+  background: #111111;
 }
 
 .city-item__dot {
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: rgba(224, 0, 0, 0.6);
-flex-shrink: 0;
-transition: background 0.2s;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(224, 0, 0, 0.6);
+  flex-shrink: 0;
+  transition: background 0.2s;
 }
 
 .city-item:hover .city-item__dot {
-background: #e00000;
+  background: #e00000;
 }
 
 .city-item span {
-color: #64748b;
-font-size: 13px;
-font-family: 'Inter', sans-serif;
-transition: color 0.2s;
+  color: #94a3b8;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  transition: color 0.2s;
 }
 
 .city-item:hover span {
-color: #e2e8f0;
+  color: #e2e8f0;
+}
+
+/* ── Destaque São Paulo ───────────────────────────────────────────────── */
+
+.city-item--state {
+  grid-column: 1 / -1;
+  min-height: 76px;
+}
+
+.city-item--state span {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+/* ── Outros estados ───────────────────────────────────────────────────── */
+
+.city-item--more {
+  grid-column: 1 / -1;
 }
 
 .city-item--more span {
-color: rgba(224, 0, 0, 0.6);
-font-style: italic;
+  color: rgba(224, 0, 0, 0.7);
+  font-style: italic;
 }
 
+
+/* ══════════════════════════════════════════════════════════════════════════
+   RESPONSIVIDADE
+══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  .regions__grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cities__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .city-item--state,
+  .city-item--more {
+    grid-column: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .regions__content h2 {
+    font-size: 1.9rem;
+  }
+
+  .regions__text {
+    font-size: 14px;
+  }
+
+  .btn-amber-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
 /* ══════════════════════════════════════════════════════════════════════════
 CTA
 ══════════════════════════════════════════════════════════════════════════ */

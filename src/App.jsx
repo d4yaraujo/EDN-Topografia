@@ -479,10 +479,10 @@ ${formData.mensagem || 'Não informado.'}
                         Responsável Técnico
                       </span>
 
-                      <h3>Ednalmo</h3>
+                      <h3>Ednalmo Almeida</h3>
 
                       <span className="about__responsavel-crea">
-                        CREA: XXXXXXX
+                        CFT: 330.827.338-16
                       </span>
                     </div>
                   </div>
@@ -1233,7 +1233,7 @@ ${formData.mensagem || 'Não informado.'}
             </p>
 
             <p className="footer__crea">
-              CREA-SP · Topografia de Precisão
+              CFT-SP · Topografia de Precisão
             </p>
 
           </div>
